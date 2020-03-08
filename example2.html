@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex. 2</title>
+</head>
+<body>
+    <button onclick="downloadExcel()">Download File</button>
+    <script src="node_modules/xlsx/dist/xlsx.full.min.js"></script>
+    <script>
+
+        function downloadExcel(e) {
+            var wb = XLSX.utils.book_new();
+            var wsName = "SheetJS";
+            var wsData = [
+                [ "S", "h", "e", "e", "t", "J", "S" ],
+                [  1 ,  2 ,  3 ,  4 ,  5 ]
+            ];
+            var ws = XLSX.utils.aoa_to_sheet(wsData);
+            XLSX.utils.book_append_sheet(wb, ws, wsName);
+            XLSX.writeFile(wb, 'SheetJS.xlsx');
+        }
+
+    </script>
+</body>
+</html>
