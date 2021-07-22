@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "file-saver": "^2.0.2",
-    "xlsx": "^0.15.5"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {},
   "scripts": {
